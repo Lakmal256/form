@@ -17,14 +17,14 @@ const App = () => {
   };
 
   return (
-    <form>
+    <div>
       {formValues.map((index) => (
         <div className="form-inline" key={index}>
           <label>Question</label>
-          <input type="text" name="name" />
+          <input className="input" type="text" name="name" />
           {index ? (
             <ListItemIcon
-              className="button remove"
+              className="button_remove"
               onClick={() => removeFormFields(index)}
             >
               <LogoutIcon />
@@ -41,7 +41,7 @@ const App = () => {
           Add
         </button>
       </div>
-    </form>
+    </div>
   );
 };
 
